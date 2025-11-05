@@ -1,0 +1,9 @@
+FROM gcc:latest
+
+WORKDIR /app
+
+COPY client.cpp .
+
+RUN g++ -o client client.cpp -std=c++11
+
+CMD ["./client"]
